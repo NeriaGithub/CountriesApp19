@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "CountryViewController.initVC():CountryViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.bordersTable">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "CountiresTableView.selectedCountryCell(coutry:):CountiresTableView.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.countriesArray">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

@@ -55,7 +55,11 @@ class CountiresTableView: UIView {
             self.countyTableDelege?.selectedCountry(country: coutry)
         }
         else {
-            //self.countriesId = coutry.borders!
+            self.countriesArray  = []
+            for countryId in coutry.borders!{
+                self.countriesArray.append(DataManager.getSharedInstance().getSpesificCountry(countryId: countryId)!)
+            }
+            
             self.countyTableDelege?.selectedCountry(country: coutry)
             self.table.reloadData()
         }
