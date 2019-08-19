@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Old-TA-MnN">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Countries-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CountriesApp19" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1IS-j9-i1t" customClass="CountiresTableView" customModule="CountriesApp19" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="99" width="375" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="VZ9-q1-6w0">
+                                <rect key="frame" x="126" y="64" width="123" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V8R-4O-mEf">
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                        <state key="normal" title="A-Z">
+                                            <color key="titleColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="sortByABC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2CK-ba-YWx"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SWU-v2-Kzd">
+                                        <rect key="frame" x="35" y="0.0" width="88" height="30"/>
+                                        <state key="normal" title="Sort  By Size"/>
+                                        <connections>
+                                            <action selector="sortBySize:" destination="BYZ-38-t0r" eventType="touchUpInside" id="y2g-Hg-MhL"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1IS-j9-i1t" secondAttribute="trailing" id="J3N-R5-jTF"/>
+                            <constraint firstItem="1IS-j9-i1t" firstAttribute="top" secondItem="VZ9-q1-6w0" secondAttribute="bottom" constant="5" id="Wrc-jE-hdp"/>
+                            <constraint firstItem="1IS-j9-i1t" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cND-61-QJu"/>
+                            <constraint firstItem="VZ9-q1-6w0" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="qPB-fy-yOt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="1IS-j9-i1t" secondAttribute="bottom" id="rLx-nV-5Lz"/>
+                            <constraint firstItem="VZ9-q1-6w0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ySd-rJ-WUl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Countries" id="1JO-GH-SWA"/>
+                    <connections>
+                        <outlet property="countriesTable" destination="1IS-j9-i1t" id="Bik-rg-vEl"/>
+                        <outlet property="sortByABC" destination="V8R-4O-mEf" id="XB0-Bt-Twi"/>
+                        <outlet property="sortBySize" destination="SWU-v2-Kzd" id="sWQ-Me-3E9"/>
+                        <segue destination="yRI-cN-e30" kind="show" identifier="countrySegue" id="3kj-iB-apT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="188" y="-531"/>
+        </scene>
+        <!--Country View Controller-->
+        <scene sceneID="2HQ-h6-WPz">
+            <objects>
+                <viewController storyboardIdentifier="countryVC" id="yRI-cN-e30" customClass="CountryViewController" customModule="CountriesApp19" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2Wd-5g-B6M">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jOU-Wa-WQe" customClass="CountiresTableView" customModule="CountriesApp19" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="jOU-Wa-WQe" firstAttribute="top" secondItem="ba0-ad-3I5" secondAttribute="top" id="AoV-Sd-Xy8"/>
+                            <constraint firstItem="ba0-ad-3I5" firstAttribute="trailing" secondItem="jOU-Wa-WQe" secondAttribute="trailing" id="EL9-gX-tJf"/>
+                            <constraint firstItem="jOU-Wa-WQe" firstAttribute="leading" secondItem="ba0-ad-3I5" secondAttribute="leading" id="PbE-Yb-7ZO"/>
+                            <constraint firstItem="ba0-ad-3I5" firstAttribute="bottom" secondItem="jOU-Wa-WQe" secondAttribute="bottom" id="ZVG-aK-wbN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ba0-ad-3I5"/>
+                    </view>
+                    <connections>
+                        <outlet property="bordersTable" destination="jOU-Wa-WQe" id="lUp-DM-iv9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PQa-HT-kuU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1033" y="-531"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="4gx-Z1-J3s">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Old-TA-MnN" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Hl4-L3-Tfj">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="qEg-kk-hzF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cyn-MS-9UV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-527" y="-531"/>
+        </scene>
+    </scenes>
+</document>
