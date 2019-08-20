@@ -12,32 +12,26 @@ class CountryViewController: UIViewController {
     
     @IBOutlet var bordersTable:
     CountiresTableView!
-    
     var selectedCountry: Country?
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         initVC()
     }
     func initVC()  {
-        self.title = self.selectedCountry?.name!
-        self.bordersTable.alphCode = self.selectedCountry?.alpha3Code
-        for countryId in self.selectedCountry!.borders!{
-            self.bordersTable.countriesArray.append(DataManager.getSharedInstance().getSpesificCountry(countryId: countryId)!)
+        if  selectedCountry != nil {
+            self.title = self.selectedCountry?.name!
+            self.bordersTable.alphCode = self.selectedCountry?.alpha3Code
+            self.bordersTable.countriesArray = self.selectedCountry!.getBordersCountries(selectedCountry: self.selectedCountry!)
+            self.bordersTable.table.reloadData()
+            
+            self.bordersTable.countyTableDelege = self
         }
-        self.bordersTable.table.reloadData()
-        
-        self.bordersTable.countyTableDelege = self
+       
     }
 }
 extension CountryViewController: CountryDelegate{
     func selectedCountry(country: Country) {
         self.title = country.name!
     }
-    
-    func showAlert() {}
-    
-    
 }
 

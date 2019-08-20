@@ -5,10 +5,7 @@
 //  Created by Neria Jerafi on 19/08/2019.
 //  Copyright © 2019 Neria Jerafi. All rights reserved.
 //
-protocol CountryDelegate {
-    func selectedCountry(country: Country)
-    func showAlert() 
-}
+
 
 import UIKit
 
@@ -56,10 +53,8 @@ class CountiresTableView: UIView {
         }
         else {
             self.countriesArray  = []
-            for countryId in coutry.borders!{
-                self.countriesArray.append(DataManager.getSharedInstance().getSpesificCountry(countryId: countryId)!)
-            }
-            
+              self.countriesArray = coutry.getBordersCountries(selectedCountry: coutry)
+
             self.countyTableDelege?.selectedCountry(country: coutry)
             self.table.reloadData()
         }

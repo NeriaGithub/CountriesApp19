@@ -1,0 +1,29 @@
+PODS:
+  - Alamofire (5.0.0-beta.7)
+  - SVProgressHUD (2.2.6)
+
+DEPENDENCIES:
+  - Alamofire (from `https://github.com/Alamofire/Alamofire.git`)
+  - SVProgressHUD (from `https://github.com/SVProgressHUD/SVProgressHUD.git`)
+
+EXTERNAL SOURCES:
+  Alamofire:
+    :git: https://github.com/Alamofire/Alamofire.git
+  SVProgressHUD:
+    :git: https://github.com/SVProgressHUD/SVProgressHUD.git
+
+CHECKOUT OPTIONS:
+  Alamofire:
+    :commit: e03912e76e829e58092190dc8b4014c207c695bf
+    :git: https://github.com/Alamofire/Alamofire.git
+  SVProgressHUD:
+    :commit: 4fdf3fdc8703fd9915dae33fc1363c604a06b24e
+    :git: https://github.com/SVProgressHUD/SVProgressHUD.git
+
+SPEC CHECKSUMS:
+  Alamofire: ca8f445dbc71dd49b968212d7a94afe64fdaaa25
+  SVProgressHUD: 6ed134667e9ebb2f33679e8273cd48fd3fa349e5
+
+PODFILE CHECKSUM: 137cb09d396ea4ee61729779dd065579fcee5a16
+
+COCOAPODS: 1.5.0

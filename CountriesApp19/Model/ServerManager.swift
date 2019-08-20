@@ -9,7 +9,7 @@
 
 
 import Foundation
-
+import Alamofire
 class ServerManager {
     
     private static var sharedInstance:ServerManager?;
@@ -25,14 +25,10 @@ class ServerManager {
     
     func getCountriesJson(completion:@escaping ([Country]?)->())  {
         guard let url = URL(string: "https://restcountries.eu/rest/v2/all") else{return}
-        
-        URLSession.shared.dataTask(with: url) { (data, response, error) in
-            if data == nil{
-                completion(nil);
-            }
-            else{
+        AF.request(url).validate().responseData { response in
+            if let response = response.value{
                 do{
-                    let countriesJson = try JSONDecoder().decode([Country].self,from: data!);
+                    let countriesJson = try JSONDecoder().decode([Country].self,from: response);
                     DataManager.getSharedInstance().setCountries(countries: countriesJson)
                     completion(countriesJson)
                 }
@@ -40,6 +36,25 @@ class ServerManager {
                     completion(nil)
                 }
             }
-            }.resume()
+            else{
+                completion(nil)
+            }
+        }
+        
+//        URLSession.shared.dataTask(with: url) { (data, response, error) in
+//            if data == nil{
+//                completion(nil);
+//            }
+//            else{
+//                do{
+//                    let countriesJson = try JSONDecoder().decode([Country].self,from: data!);
+//                    DataManager.getSharedInstance().setCountries(countries: countriesJson)
+//                    completion(countriesJson)
+//                }
+//                catch{
+//                    completion(nil)
+//                }
+//            }
+//            }.resume()
     }
 }

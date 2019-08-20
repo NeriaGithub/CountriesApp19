@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class ViewController: UIViewController {
     
@@ -18,22 +19,23 @@ class ViewController: UIViewController {
     var isCheckedSize:Bool = false
     override func viewDidLoad() {
         super.viewDidLoad()
+        SVProgressHUD.setDefaultStyle(.dark);
+        SVProgressHUD.show(withStatus:"Loading...")
         getData()
     }
+    
+    
     
     func getData(){
         DispatchQueue.global(qos: .background).async {
             ServerManager.getSharedInstance().getCountriesJson(completion: { (data) in
                 if data != nil{
-                    
                     self.countriesTable.countriesArray = data!.sorted(by: {$0.name ?? "" < $1.name ?? ""})
-                    
-                    
                     self.countriesTable.countyTableDelege = self
                     DispatchQueue.main.async {
+                        SVProgressHUD.dismiss()
                         self.countriesTable.table.reloadData()
                     }
-                    
                 }
             })
         }

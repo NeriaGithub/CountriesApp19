@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A0DF48D7D1427564DF832DF4 /* Pods_CountriesApp19.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42CA2F78AC63E0932FEBBE30 /* Pods_CountriesApp19.framework */; };
+		D6A5EABC230BD29000F1A497 /* CountryDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A5EABB230BD29000F1A497 /* CountryDelegate.swift */; };
 		EE44541922C14BAA00DB123D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE44541822C14BAA00DB123D /* AppDelegate.swift */; };
 		EE44541B22C14BAA00DB123D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE44541A22C14BAA00DB123D /* ViewController.swift */; };
 		EE44541E22C14BAA00DB123D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE44541C22C14BAA00DB123D /* Main.storyboard */; };
@@ -24,6 +26,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1C9904C152A809DB5E359628 /* Pods-CountriesApp19.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CountriesApp19.release.xcconfig"; path = "Pods/Target Support Files/Pods-CountriesApp19/Pods-CountriesApp19.release.xcconfig"; sourceTree = "<group>"; };
+		42CA2F78AC63E0932FEBBE30 /* Pods_CountriesApp19.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CountriesApp19.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DC2B804AF6FA1DBD315032F /* Pods-CountriesApp19.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CountriesApp19.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CountriesApp19/Pods-CountriesApp19.debug.xcconfig"; sourceTree = "<group>"; };
+		D6A5EABB230BD29000F1A497 /* CountryDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDelegate.swift; sourceTree = "<group>"; };
 		EE44541522C14BAA00DB123D /* CountriesApp19.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CountriesApp19.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE44541822C14BAA00DB123D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE44541A22C14BAA00DB123D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,17 +53,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0DF48D7D1427564DF832DF4 /* Pods_CountriesApp19.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8A5566255E9350A6445CA3CB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8DC2B804AF6FA1DBD315032F /* Pods-CountriesApp19.debug.xcconfig */,
+				1C9904C152A809DB5E359628 /* Pods-CountriesApp19.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B6E7282E307B1DE6DE20D7A1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				42CA2F78AC63E0932FEBBE30 /* Pods_CountriesApp19.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		EE44540C22C14BAA00DB123D = {
 			isa = PBXGroup;
 			children = (
 				EE44541722C14BAA00DB123D /* CountriesApp19 */,
 				EE44541622C14BAA00DB123D /* Products */,
+				8A5566255E9350A6445CA3CB /* Pods */,
+				B6E7282E307B1DE6DE20D7A1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -88,6 +114,7 @@
 				EE44543222C14FE300DB123D /* DataManager.swift */,
 				EE44543522C1501800DB123D /* ServerManager.swift */,
 				EE44543722C1505E00DB123D /* Country.swift */,
+				D6A5EABB230BD29000F1A497 /* CountryDelegate.swift */,
 				EE97C74C22C271F5000E47DA /* Constants.swift */,
 			);
 			path = Model;
@@ -122,9 +149,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EE44542722C14BAC00DB123D /* Build configuration list for PBXNativeTarget "CountriesApp19" */;
 			buildPhases = (
+				81B0F8F3127DA7D7F6ECC8B9 /* [CP] Check Pods Manifest.lock */,
 				EE44541122C14BAA00DB123D /* Sources */,
 				EE44541222C14BAA00DB123D /* Frameworks */,
 				EE44541322C14BAA00DB123D /* Resources */,
+				2E1BA5A577E55A7FE91E1AAC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -184,6 +213,47 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2E1BA5A577E55A7FE91E1AAC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CountriesApp19/Pods-CountriesApp19-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CountriesApp19/Pods-CountriesApp19-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		81B0F8F3127DA7D7F6ECC8B9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CountriesApp19-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EE44541122C14BAA00DB123D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -192,6 +262,7 @@
 				EE44543822C1505E00DB123D /* Country.swift in Sources */,
 				EE97C74B22C26458000E47DA /* CountryViewController.swift in Sources */,
 				EE44543622C1501800DB123D /* ServerManager.swift in Sources */,
+				D6A5EABC230BD29000F1A497 /* CountryDelegate.swift in Sources */,
 				EE44541B22C14BAA00DB123D /* ViewController.swift in Sources */,
 				EE44543322C14FE300DB123D /* DataManager.swift in Sources */,
 				EE44543022C14F1C00DB123D /* CountyCell.swift in Sources */,
@@ -341,6 +412,7 @@
 		};
 		EE44542822C14BAC00DB123D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8DC2B804AF6FA1DBD315032F /* Pods-CountriesApp19.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -359,6 +431,7 @@
 		};
 		EE44542922C14BAC00DB123D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C9904C152A809DB5E359628 /* Pods-CountriesApp19.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

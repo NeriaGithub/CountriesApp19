@@ -14,6 +14,19 @@ struct Country:Decodable {
     let alpha3Code:String?
     let borders:[String]?
     let area:Float?
+    
+    func getBordersCountries(selectedCountry:Country) -> [Country] {
+        guard let borders = selectedCountry.borders  else {
+            return  []
+        }
+        var  countries:[Country] = []
+        for countryId in borders {
+            if let country = DataManager.getSharedInstance().getSpesificCountry(countryId: countryId){
+                countries.append(country)
+            }
+        }
+        return countries
+    }
 }
 
 
