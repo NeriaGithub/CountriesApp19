@@ -10,7 +10,7 @@ import UIKit
 
 struct Country:Decodable {
     let name: String?
-    let nativeName: String? //if there is anything missing
+    let nativeName: String?
     let alpha3Code:String?
     let borders:[String]?
     let area:Float?

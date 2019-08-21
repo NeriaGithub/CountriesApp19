@@ -52,7 +52,6 @@ class CountiresTableView: UIView {
             self.countyTableDelege?.selectedCountry(country: coutry)
         }
         else {
-            self.countriesArray  = []
               self.countriesArray = coutry.getBordersCountries(selectedCountry: coutry)
 
             self.countyTableDelege?.selectedCountry(country: coutry)

@@ -24,8 +24,6 @@ class ViewController: UIViewController {
         getData()
     }
     
-    
-    
     func getData(){
         DispatchQueue.global(qos: .background).async {
             ServerManager.getSharedInstance().getCountriesJson(completion: { (data) in
@@ -81,7 +79,7 @@ class ViewController: UIViewController {
 }
 extension ViewController:CountryDelegate{
     func showAlert() {
-        let alert = UIAlertController(title: Constants.alertTitle, message: nil, preferredStyle: UIAlertController.Style.alert);
+        let alert = UIAlertController(title: "No Borders Countries", message: nil, preferredStyle: UIAlertController.Style.alert);
         alert.addAction(UIAlertAction(title: "close", style: .cancel, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
@@ -90,7 +88,5 @@ extension ViewController:CountryDelegate{
         self.selectedCountry = country
         performSegue(withIdentifier: "countrySegue", sender: self)
     }
-    
-    
 }
 

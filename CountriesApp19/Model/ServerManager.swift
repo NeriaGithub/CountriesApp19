@@ -40,21 +40,5 @@ class ServerManager {
                 completion(nil)
             }
         }
-        
-//        URLSession.shared.dataTask(with: url) { (data, response, error) in
-//            if data == nil{
-//                completion(nil);
-//            }
-//            else{
-//                do{
-//                    let countriesJson = try JSONDecoder().decode([Country].self,from: data!);
-//                    DataManager.getSharedInstance().setCountries(countries: countriesJson)
-//                    completion(countriesJson)
-//                }
-//                catch{
-//                    completion(nil)
-//                }
-//            }
-//            }.resume()
     }
 }

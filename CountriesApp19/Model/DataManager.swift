@@ -34,15 +34,10 @@ class DataManager {
         return self.countriesDict
     }
     
-    
-    
     func getSpesificCountry(countryId: String) -> Country?{ 
         if let country = self.countriesDict[countryId]{
             return country
         }
         return nil
-        
     }
-    
-    
 }

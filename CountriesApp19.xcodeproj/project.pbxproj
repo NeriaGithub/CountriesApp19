@@ -22,7 +22,6 @@
 		EE44543622C1501800DB123D /* ServerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE44543522C1501800DB123D /* ServerManager.swift */; };
 		EE44543822C1505E00DB123D /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE44543722C1505E00DB123D /* Country.swift */; };
 		EE97C74B22C26458000E47DA /* CountryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE97C74A22C26458000E47DA /* CountryViewController.swift */; };
-		EE97C74D22C271F5000E47DA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE97C74C22C271F5000E47DA /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,7 +44,6 @@
 		EE44543522C1501800DB123D /* ServerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerManager.swift; sourceTree = "<group>"; };
 		EE44543722C1505E00DB123D /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		EE97C74A22C26458000E47DA /* CountryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryViewController.swift; sourceTree = "<group>"; };
-		EE97C74C22C271F5000E47DA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +99,7 @@
 				EE44543A22C1570C00DB123D /* Controller */,
 				EE44543422C14FFE00DB123D /* Model */,
 				EE44541822C14BAA00DB123D /* AppDelegate.swift */,
+				D6A5EABB230BD29000F1A497 /* CountryDelegate.swift */,
 				EE44543922C1525200DB123D /* View */,
 				EE44541F22C14BAC00DB123D /* Assets.xcassets */,
 				EE44542422C14BAC00DB123D /* Info.plist */,
@@ -114,8 +113,6 @@
 				EE44543222C14FE300DB123D /* DataManager.swift */,
 				EE44543522C1501800DB123D /* ServerManager.swift */,
 				EE44543722C1505E00DB123D /* Country.swift */,
-				D6A5EABB230BD29000F1A497 /* CountryDelegate.swift */,
-				EE97C74C22C271F5000E47DA /* Constants.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -268,7 +265,6 @@
 				EE44543022C14F1C00DB123D /* CountyCell.swift in Sources */,
 				EE44541922C14BAA00DB123D /* AppDelegate.swift in Sources */,
 				EE44542D22C14CF800DB123D /* CountiresTableView.swift in Sources */,
-				EE97C74D22C271F5000E47DA /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

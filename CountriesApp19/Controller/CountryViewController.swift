@@ -26,7 +26,6 @@ class CountryViewController: UIViewController {
             
             self.bordersTable.countyTableDelege = self
         }
-       
     }
 }
 extension CountryViewController: CountryDelegate{
